@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "cmcc-message-gateway",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-15",
+
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "CMCC_GATEWAY",
+        "class_name": "CmccGateway"
+      }
+    ]
+  },
+
+  "exports": {
+    "CmccGateway": {
+      "type": "durable-object",
+      "storage": "sqlite"
+    }
+  },
+
+  "vars": {
+    "CMCC_SERVER_URL": "wss://5gvas01.cmicmaap.com/gtw-ai/openclaw/ws/msg",
+    "CMCC_UPLOAD_URL": "https://5gvas01.cmicmaap.com/gtw-ai/openclaw/api",
+    "CMCC_VERSION": "2.0"
+  }
+}

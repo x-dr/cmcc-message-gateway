@@ -1,0 +1,20 @@
+{
+  "name": "cmcc-message-gateway",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "typecheck": "tsc --noEmit",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260915.1",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.0.0"
+  },
+  "dependencies": {
+    "hono": "^4.13.8"
+  }
+}
